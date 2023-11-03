@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.3)  3 NOV 2023 03:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.3)  3 NOV 2023 03:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -469,26 +469,31 @@ Package pdftex.def Info: 2.png  used on input line 82.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[2 <./1.png> <./2.png>] [3] (./cesium-jl.aux)
+<3.png, id=16, 806.01125pt x 1227.58624pt>
+File: 3.png Graphic file (type png)
+<use 3.png>
+Package pdftex.def Info: 3.png  used on input line 87.
+(pdftex.def)             Requested size: 292.69373pt x 445.77066pt.
+[2 <./1.png> <./2.png>] [3 <./3.png>] (./cesium-jl.aux)
 Package rerunfilecheck Info: File `cesium-jl.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 11002 strings out of 476025
- 171909 string characters out of 5790018
+ 11009 strings out of 476025
+ 171975 string characters out of 5790018
  1862388 words of memory out of 5000000
- 31307 multiletter control sequences out of 15000+600000
+ 31313 multiletter control sequences out of 15000+600000
  514755 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,76p,448b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,76p,459b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on cesium-jl.pdf (3 pages, 337825 bytes).
+Output written on cesium-jl.pdf (3 pages, 405547 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
+ 48 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
  4 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

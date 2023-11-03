@@ -120,7 +120,7 @@ end
 #alph = "O123456789"
 alph = "O|"
 #n  = 16 * length(alph)
-n = 16
+n = 32
 t = 32
 #t = length(alph)
 k = key(n)
