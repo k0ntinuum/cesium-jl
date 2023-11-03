@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.3)  3 NOV 2023 01:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.3)  3 NOV 2023 03:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**loop-jl.tex
-(./loop-jl.tex
+**cesium-jl.tex
+(./cesium-jl.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-02-22>
 (/usr/local/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -351,8 +351,8 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count293
 \l__pdf_internal_box=\box56
 )
-(./loop-jl.aux)
-\openout1 = `loop-jl.aux'.
+(./cesium-jl.aux)
+\openout1 = `cesium-jl.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 28.
 LaTeX Font Info:    ... okay on input line 28.
@@ -430,9 +430,9 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 28.
-(./loop-jl.out) (./loop-jl.out)
+(./cesium-jl.out) (./cesium-jl.out)
 \@outlinefile=\write3
-\openout3 = `loop-jl.out'.
+\openout3 = `cesium-jl.out'.
 
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 33
 .
@@ -452,41 +452,43 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
 (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<1.png, id=4, 795.97375pt x 1196.47pt>
+File: 1.png Graphic file (type png)
+<use 1.png>
+Package pdftex.def Info: 1.png  used on input line 75.
+(pdftex.def)             Requested size: 292.69373pt x 439.94847pt.
+ [1
 
-Package amsfonts Warning: Obsolete command \Bbb; \mathbb should be used instead
- on input line 33.
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+<2.png, id=15, 951.555pt x 957.5775pt>
+File: 2.png Graphic file (type png)
+<use 2.png>
+Package pdftex.def Info: 2.png  used on input line 82.
+(pdftex.def)             Requested size: 292.69373pt x 294.55196pt.
 
-<ex.png, id=4, 924.45375pt x 573.14125pt>
-File: ex.png Graphic file (type png)
-<use ex.png>
-Package pdftex.def Info: ex.png  used on input line 45.
-(pdftex.def)             Requested size: 292.69373pt x 181.45871pt.
-[1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./ex.pn
-g>] (./loop-jl.aux)
-Package rerunfilecheck Info: File `loop-jl.out' has not changed.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2 <./1.png> <./2.png>] [3] (./cesium-jl.aux)
+Package rerunfilecheck Info: File `cesium-jl.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10994 strings out of 476025
- 171823 string characters out of 5790018
+ 11002 strings out of 476025
+ 171909 string characters out of 5790018
  1862388 words of memory out of 5000000
- 31302 multiletter control sequences out of 15000+600000
- 515101 words of font info for 46 fonts, out of 8000000 for 9000
+ 31307 multiletter control sequences out of 15000+600000
+ 514755 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,76p,533b,478s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,76p,448b,535s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></us
-r/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
-/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/
-local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on loop-jl.pdf (1 page, 262511 bytes).
+usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on cesium-jl.pdf (3 pages, 337825 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
- 2 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
