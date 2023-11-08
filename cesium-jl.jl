@@ -31,9 +31,11 @@ end
 function red()
     rgb(255,0,0)
 end
+
 function yellow()
     rgb(255,255,0)
 end
+
 function white()
     rgb(255,255,255)
 end
@@ -54,21 +56,9 @@ function text(b,n)
     rand(0:b-1, n) 
 end
 
-function spinrows(k)
-    for j in 1:size(k)[begin]
-        k[j,:] = circshift(k[j,:],k[j,j])
-    end
-end
-
-function spincols(k)
-    for j in 1:size(k)[begin]
-        k[:,j] = circshift(k[:,j],k[j,j])
-    end 
-end
-
 function spinrows(k,p)
     for j in 1:size(k)[begin]
-            k[j,:] = circshift(k[j,:],k[j,j]+p+1)
+        k[j,:] = circshift(k[j,:],k[j,j]+p+1)
     end
 end
 
@@ -127,8 +117,6 @@ function decrypt(p, q, b)
     end
     p
 end
-
-
 
 function demo()
     b = 26
