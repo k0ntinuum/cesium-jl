@@ -5,29 +5,58 @@ using LinearAlgebra
 
 
 
-str_from_vec(v)  = join(map(i -> alph[i+1:i+1], v))
+
+function str_from_vec(v,c)
+    #alph = "O|"
+    alph = "abcdefghijklmnopqrstuvwxyz"
+    join(map(i -> alph[i+1:i+1]*c, v))
+end
 
 function printkey(k)
-	for i in 1:n print(join(map(i -> alph[i+1:i+1]*" ", k[i,:])),"\n") end
+    n = size(k)[begin]
+	for i in 1:n print(str_from_vec( k[i,:]," " ),"\n") end
 	print("\n")
 end
 
-str_from_vec(v,c)  = join(map(i -> alph[i+1:i+1]*c, v))
 
-vec_from_str(s) = map(i -> findfirst(isequal(i),alph),collect(s))
 
-rgb(r,g,b) =  "\e[38;2;$(r);$(g);$(b)m"
+function vec_from_str(s)
+    map(i -> findfirst(isequal(i),alph),collect(s))
+end
 
-red() = rgb(255,0,0);yellow() = rgb(255,255,0);white() = rgb(255,255,255);gray(h) = rgb(h,h,h)
-blue() = rgb(0,0,255);
+function rgb(r,g,b)
+    "\e[38;2;$(r);$(g);$(b)m"
+end
 
-function key(n) rand(0:n-1, n, n) end
-function key(n,b) rand(0:b-1, n, n) end
-function text(n)  rand(0:b-1, n) end
+function red()
+    rgb(255,0,0)
+end
+function yellow()
+    rgb(255,255,0)
+end
+function white()
+    rgb(255,255,255)
+end
+
+function gray(h)
+    rgb(h,h,h)
+end
+
+function key(n) 
+    rand(0:n-1, n, n) 
+end
+
+function key(n,b)
+    rand(0:b-1, n, n) 
+end
+
+function text(b,n) 
+    rand(0:b-1, n) 
+end
 
 function spinrows(k)
     for j in 1:size(k)[begin]
-            k[j,:] = circshift(k[j,:],k[j,j])
+        k[j,:] = circshift(k[j,:],k[j,j])
     end
 end
 
@@ -57,7 +86,7 @@ function spin(q,n)
     k
 end
 
-function encode(p,q)
+function encode(p,q,b)
     k = copy(q)
     c = Int64[]
     for i in eachindex(p)
@@ -68,7 +97,7 @@ function encode(p,q)
     c
 end
 
-function decode(p,q)
+function decode(p,q,b)
     k = copy(q)
     c = Int64[]
     for i in eachindex(p)
@@ -79,20 +108,22 @@ function decode(p,q)
     c
 end
 
-function encrypt(p, q, r)
-    for i in 1:r
+function encrypt(p, q, b)
+    n = size(q)[begin]
+    for i in 1:n
         k = spin(q,i)
-        p = encode(p,k)
+        p = encode(p,k,b)
         p = reverse(p)
     end
     p
 end
 
-function decrypt(p, q, r)
-    for i in 1:r
-        k = spin(q,r + 1 - i)
+function decrypt(p, q, b)
+    n = size(q)[begin]
+    for i in 1:n
+        k = spin(q,n + 1 - i)
         p = reverse(p)
-        p = decode(p,k)
+        p = decode(p,k,b)
     end
     p
 end
@@ -100,32 +131,24 @@ end
 
 
 function demo()
+    b = 26
+    n = 26
+    t = 32
+    k = key(n,b)
 	print(white(),"k =\n",gray(100))
     printkey(k)
     for i in 1:20
-    	p = text(t)
-    	c  = encrypt(p,k,r)
-    	d  = decrypt(c,k,r)
-    	print(white(),"f( ", red(), str_from_vec(p), white()," ) = ")
-    	print(yellow(),str_from_vec(c), " \n")
+    	p = text(b,t)
+    	c  = encrypt(p,k,b)
+    	d  = decrypt(c,k,b)
+    	print(white(),"f( ", red(), str_from_vec(p,""), white()," ) = ")
+    	print(yellow(),str_from_vec(c,""), " \n")
     	print(white())
     	if p != d @printf "ERROR" end
     end
 end
 
-#global
 
-#alph = "abcdefghijklmnopqrstuvwxyz"
-#alph = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-#alph = "O123456789"
-alph = "O|"
-#n  = 16 * length(alph)
-n = 32
-t = 32
-#t = length(alph)
-k = key(n)
-b = length(alph)
-r = 20
 
-k = key(n,b)
+
 
