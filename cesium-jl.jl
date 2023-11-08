@@ -120,7 +120,7 @@ end
 
 function demo()
     b = 26
-    n = 26
+    n = 16
     t = 32
     k = key(n,b)
 	print(white(),"k =\n",gray(100))
