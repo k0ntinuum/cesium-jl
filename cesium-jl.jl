@@ -6,23 +6,7 @@ using LinearAlgebra
 
 
 
-function str_from_vec(v,c)
-    #alph = "O|"
-    alph = "abcdefghijklmnopqrstuvwxyz"
-    join(map(i -> alph[i+1:i+1]*c, v))
-end
 
-function printkey(k)
-    n = size(k)[begin]
-	for i in 1:n print(str_from_vec( k[i,:]," " ),"\n") end
-	print("\n")
-end
-
-
-
-function vec_from_str(s)
-    map(i -> findfirst(isequal(i),alph),collect(s))
-end
 
 function rgb(r,g,b)
     "\e[38;2;$(r);$(g);$(b)m"
